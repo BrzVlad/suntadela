@@ -1,0 +1,10 @@
+@page
+@model suntadela.web.Areas.Identity.Pages.Account.ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div asp-validation-summary="All" class="text-danger" role="alert"></div>
+<p>@Model.StatusMessage</p>
