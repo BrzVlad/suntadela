@@ -10,8 +10,8 @@ public static class BuildInfo
 
     static BuildInfo()
     {
-        var assembly = Assembly.GetExecutingAssembly();
-        var metadata = assembly.GetCustomAttributes<AssemblyMetadataAttribute>();
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        IEnumerable<AssemblyMetadataAttribute> metadata = assembly.GetCustomAttributes<AssemblyMetadataAttribute>();
         CommitHash = metadata.FirstOrDefault(a => a.Key == "GitCommitHash")?.Value ?? "unknown";
         IsDevBuild = metadata.FirstOrDefault(a => a.Key == "IsDevBuild")?.Value == "true";
     }
