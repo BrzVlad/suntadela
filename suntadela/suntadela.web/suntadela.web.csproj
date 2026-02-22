@@ -23,6 +23,9 @@
       <Output TaskParameter="ConsoleOutput" PropertyName="GitCommitHash" />
     </Exec>
 
+    <Message Importance="high" Text="GitCommitHash: $(GitCommitHash)" />
+    <Message Importance="high" Text="GitBranch: $(GitBranch)" />
+
     <ItemGroup>
       <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
         <_Parameter1>GitCommitHash</_Parameter1>
